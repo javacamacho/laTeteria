@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer'
+    ;
+    grid-template-columns: 1fr;
+}
+
+menu {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    grid-area: header;
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10vh;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.img-logo {
+    width: 20vw;
+}
+
+.p-logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 24pt;
+}
+
+main {
+    grid-area: main;
+}
+
+.titulo {
+    font-family: "Raleway", sans-serif;
+    color: orangered;
+    font-weight: bold;
+    font-size: 20pt;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.tarjetas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    filter: grayscale(100%);
+    width: 250px;
+}
+
+.card img:hover {
+    filter: grayscale(0%);
+}
+
+.p-card {
+    font-family: "Raleway", sans-serif;
+    font-size: 16pt;
+    padding-bottom: 10px;
+}
+
+.btn {
+    font-family: "Raleway", sans-serif;
+    background-color: orangered;
+    color: white;
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-out;
+}
+
+.btn:hover {
+    background-color: #facf40;
+}
+
+footer {
+    grid-area: footer;
+    font-family: "Raleway", sans-serif;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: orangered;
+    color: white;
+    text-align: center;
+}
+
+i {
+    font-size: 16pt;
+    padding: 5px;
+}
+
+@media (min-width: 576px) {
+    body {
+        display: grid;
+        grid-template-areas: 
+        'header header'
+        'menu main'
+        'footer footer'
+        ;
+        grid-template-columns: 1fr 5fr;
+    }
+    
+    .img-logo {
+        width: 5vw;
+    }
+
+    menu {
+        font-family: "Raleway", sans-serif;
+        grid-area: menu;
+        background-color: #d3d3d3d4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding-top: 30px;
+        line-height: 25pt;
+    }
+
+    .fa-bars {
+        display: none;
+    }
+
+    .tarjetas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .card img {
+        width: 200px;
+    }
+
+    main {
+        padding-left: 35px;
+    }
+}
