@@ -7,6 +7,7 @@ body {
     display: grid;
     grid-template-areas: 
     'header'
+    'menu'
     'main'
     'footer'
     ;
@@ -14,11 +15,26 @@ body {
 }
 
 menu {
-    display: none;
+    font-family: "Raleway", sans-serif;
+    background-color: #f38056;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+menu:hover {
+    color: white;
 }
 
 a {
     text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: white;
 }
 
 header {
